@@ -1,0 +1,54 @@
+.box .block {
+	height: 200px;
+}
+.box .block:nth-of-type(even) {
+	background-color: #333;
+}
+.box .block:nth-of-type(odd) {
+	background-color: #AAA;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.box {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.grid-col-1of5 {
+	flex: 1 1 auto;
+}
+
+@media (max-width: 30em) {
+
+.grid-col-1of5 {
+	flex: 0 0 100%;
+}
+
+}
+
+.grid-col-1of3 {
+	flex: 1 1 auto;
+}
+
+@media (max-width: 30em) {
+
+.grid-col-1of3 {
+	flex: 0 0 100%;
+}
+
+}
+
+.grid-col-1of2 {
+	flex: 1 1 auto;
+}
+
+@media (max-width: 30em) {
+
+.grid-col-1of2 {
+	flex: 0 0 100%;
+}
+
+}
