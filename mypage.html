@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>P02 - Strength Camp</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial scale=1.0">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/grid.css">
+</head>
+
+
+
+<body>
+
+  <header id="top">
+    <nav class="grid-row">
+      <div class="grid-col-mobile-2th12 grid-col-1th12">
+        <a class="logo" href="#">
+        <img src="img/logo6.png" alt="logo" class="logo"></a>
+      </div>
+
+      <div class="grid-col-mobile-2th12 grid-col-1th12" style="float: right">
+        <a class="button-nav" href="mypage.html; ">My Page</a>
+      </div>
+
+      <div class="grid-col-mobile-2th12 grid-col-1th12" style="float: right">
+        <a class="button-nav" href="Home.html">Packages</a>
+      </div>
+
+      <div class="grid-col-mobile-2th12 grid-col-1th12" style="float: right">
+        <a class="button-nav" href="Home.html">Classes</a>
+      </div>
+
+      <div class="grid-col-mobile-2th12 grid-col-1th12" style="float: right">
+        <a class="button-nav" href="Home.html">About Us</a>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+<section id="My_Page">
+
+
+  <div class="grid-row">
+    <div class="heading1">Cart</div>
+    <div class="grid-col-mobile-12th12 grid-col-checkout-12th12">
+
+      <div class="grid-col-cart-6th12 grid-col-mobile-8th12 grid-col-8th12">
+       <h3 class=" section-info" style="text-align: left">Product</h3>
+     </div>
+     <div class="grid-col-cart-3th12 grid-col-mobile-2th12 grid-col-2th12">
+       <h3 class="section-info"> Quantity</h3>
+     </div>
+     <div class="grid-col-cart-3th12 grid-col-mobile-2th12 grid-col-2th12">
+       <h3 class="section-info"> Cost</h3>
+     </div>
+   </div>
+
+   <div class="block grid-col-cart-12th12 grid-col-m-12th12 grid-col-12th12"></div>
+
+   <div class="grid-col-mobile-3th12 grid-col-2th12">
+    <img class="cartimage" src="img/pac1.jpg" alt="empty-box">
+  </div>
+
+  <div class="grid-col-cart-6th12 grid-col-mobile-5th12 grid-col-6th12">
+    <h3 class="carttitle">Package 1</h3>
+    <div class="cartinfo" style="text-align: left"> 1 Month </div>
+    <div class="cartinfo" style="text-align: left"> + 1 Personal Training Session
+     <p class="mintCircle"></p>
+   </div>
+ </div>
+ <!-- quantity -->
+ <div class="grid-col-cart-3th12 grid-col-mobile-2th12 grid-col-2th12" style="padding-top: 2.5em">
+  <div class="grid-col-cart-1th12 grid-col-mobile-4th12 grid-col-4th12" style="padding-top: 2.5em"></div>
+  <div class="grid-col-cart-4th12 grid-col-mobile-4th12 grid-col-4th12">
+    <div class="dropdown">
+      <button class="dropdown-quantity" style="width: 3.5em">1</button>
+      <div class="dropdown-content" style="width: 3.5em">
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#">8</a>                   
+        <a href="#">9</a>
+      </div>
+    </div>
+  </div>
+  <div class="grid-col-cart-4th12 grid-col-mobile-4th12 grid-col-4th12"></div>
+</div>
+<!-- quantity -->
+<div class="grid-col-cart-3th12 grid-col-mobile-2th12 grid-col-2th12" style="padding-top: 2em">
+  <h3>$50</h3>
+</div>
+<div class="block grid-col-cart-12th12 grid-col-mobile-12th12 grid-col-12th12">
+</div>
+<div class="grid-col-cart-10th12 grid-col-mobile-10th12 grid-col-10th12" style="text-align:right">
+  <h3> Total Cost:</h3>
+</div>
+<div class="grid-col-cart-2th12 grid-col-mobile-2th12 grid-col-2th12">
+  <h3> $50</h3>
+</div>
+
+<div class="grid-col-cart-9th12 grid-col-mobile-10th12 grid-col-10th12" style="margin-top: 2em"></div>
+
+<div class="grid-col-cart-3th12 grid-col-mobile-2th12 grid-col-2th12">
+ <button id="myBtn"; class="button-fill" style="margin-top: 2em" >Checkout</button>
+</div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Payment information</h2>
+    </div>
+    <div class="modal-body">
+      <div style="text-align: center;">
+<input type="text" id="name" placeholder="Cardholder's Name" style="margin-top:5em" >
+</div>
+<div style="text-align: center;">
+<input type="text" id="email" placeholder="Card Number" >
+</div>
+<div style="text-align: center;">
+<input type="text" id="username" placeholder="Expiry date" >
+</div>
+<div style="text-align: center;">
+<input type="text" id="password" placeholder="CSS Number" >
+</div>
+<p><div style="text-align: center; margin-bottom: 2em">
+  <a class="button" href="#">Submit</a>
+
+  <a class="button" href="#">Reset</a>
+</div></p>
+    </div>
+    <div class="modal-footer">
+      <h3>Strength Camp</h3>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</div>
+</section>
+</body>
+
+</html>
