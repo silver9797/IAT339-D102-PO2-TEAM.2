@@ -1,45 +1,71 @@
 body {
   font-family:  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
-  Helvetica, Arial, "Lucida Grande", sans-serif; 
-  padding: 3rem;
+  Helvetica, sans-serif; 
+  padding: 0rem;
+  margin:0;
   background-color: #000000;
 
 }
 
 .logo {
-  display:inline-block;
-  width:65%;
-  height:65%;
-
+width:55px;
+padding-top: 0.5em;
 }
+
+.logobox {
+  display:inline-block;
+  margin:0em;
+  padding:0.1em 1em;
+  width:100%;
+  height:100%;
+}
+
 
 section:not([id]) {
   margin: 1em 0;
   padding: 1em 0;
-  border-bottom: 0.025em solid #333;
-  padding-bottom: 0.05em;
 }
+
+h1 {
+    font-family: 'HelveticaNeue-Light', Helvetica, sans-serif;
+    margin: 1rem 0 0rem 0;
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    color: #EEE;
+}
+h3{
+  text-align:center;
+}
+
+
 
 section h2 {
   margin-top: 0;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
+  padding-bottom:0.05em;
 }
 
 section h3 {
   margin-bottom: 0;
-  margin-left: 0;
+  /*margin-right: 0;*/
   color:#EEE;
+    text-align:center;
+
 }
 section h4 {
   margin-top: 0;
   margin-bottom: 1em;
   padding-bottom: 0.1em;
-  float: left;
+  float:left;
   font-size: 1.2rem;
   font-weight: bold;
+
 }
 section p {
-  margin-top: 0;
+  color:#EEE;
+  font-size: 24px;
+    margin-top:0;
 }
 
 a {
@@ -48,22 +74,35 @@ a {
   display: block;
 }
 a:hover, a:focus {
-  color: #00a7b5;
+  color: #EEE;
   text-decoration:  none;
   transition: color 1s;
   
 }
 nav {
   width: 100%;
-  top: 0em;
-  left: 0em;
-  margin-bottom: 1em;
-  padding-bottom: 0.5em;
-  padding-top: 0.5em;
-  border-bottom: 0.005em solid #333;
-  background-color: #333333;
-  position: fixed;
+  background-color: #000000;
+  z-index: 10;
 }
+@media(min-width:40em) {
+  nav{
+  top:0em;
+  left:0em;
+  position:fixed;
+}
+  .header1{
+  padding-top: 2em;
+}
+
+}
+li {
+  font-family: 'HelveticaNeue-Light';
+  font-weight: normal;
+  font-size: 0.85rem;
+  text-align: center;
+  color:#EEE;
+}
+
 
 nav a:hover, nav a:focus {
   color: #00a7b5;
@@ -71,18 +110,28 @@ nav a:hover, nav a:focus {
   transition: color 1s;
 }
 
+.home {
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+      ),
+    url('../img/yoga.jpg');
+  background-position: top center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 35rem;
+  display: flex;
+    align-items: center; 
+
+}
+
 section code {
   background-color: #EEE;
   padding: 0.5em 0.75em;
   display: block;
-}
-
-
-li {
-  font-family: "HelveticaNeue-Light";
-  font-weight: normal;
-  font-size: 0.85rem;
-  text-align: left;
 }
 
 section label{
@@ -94,38 +143,32 @@ section label{
   padding-bottom: 2em;
   padding-top: 2em;
 }
-.button {
-  display: inline-block;
-  padding: 1em 1.25em;
-  color: #EEE;
-  background-color: #333333;
-  font-size: 0.8em;
-  text-transform: uppercase;
-  text-decoration: none;
-}
+
 .button-nav { 
   display: inline-block;
   margin: 0em;
   padding: 1.7em 0.75em; 
+  width:100%;
   color: #FFF; 
-  background-color: #333333; 
+  background-color: #000000; 
   text-decoration: none;
   -webkit-transition: background-color 0.35s ease-out; 
   transition: background-color 0.35s ease-out;
 }
 
 .button-nav:hover, .button-nav:focus { 
-  /*background-color: #EEEDED; */
+  background-color:#00a7b5;
+  color:#FFF;
 }
 
 .button-fill {
   display: inline-block;
   padding: 0.5em 0.75em; 
   color: #f9f9fa;
-  background-color: #00a7b5; 
   border-style: solid; 
   border-color: #EEE;
   border-radius: 5em; 
+  background-color: transparent;
   text-decoration: none; 
   -webkit-transition: background-color 0.35s ease-out;
   transition: background-color 0.35s ease-out;
@@ -207,12 +250,8 @@ section label{
 }
 
 .dropdown:hover .dropdown-button {
-  background-color: #e5e5e5; /*change background color of dropdown menu links on mouse-hover*/
+  background-color: #e5e5e5; 
 }
-
-
-
-/*Styling for the in-text link*/
 
 .in-text-link {
   color: #EEE;
@@ -220,12 +259,10 @@ section label{
   font-style: normal;
 }
 
-.in-text-link:hover, .in-text-link:focus, .button-fill:focus, .button-fill:hover, .button-outline:focus, .button-outline:hover{ /*comma specifies the two states we want; the two states here are hover and focus*/
-  opacity: 0.5; /* change in-text link and button opacity to 70% on mouse hover */
+.in-text-link:hover, .in-text-link:focus, .button-fill:focus, .button-fill:hover, .button-outline:focus, .button-outline:hover{
+  opacity: 0.5; 
 }
 
-
-/* Styling for the text input field */
 form {
   display: inline-block;
   padding:0.5rem 0rem;
@@ -265,17 +302,15 @@ input[id='quantity'] {
   font-size: 2.2rem;
   font-weight: bold;
   text-align: center;
+  margin-top:8rem;
   color: #EEE;
-  margin-top: 8rem;
-  margin-bottom: : 3rem;
- 
-  padding-bottom: 2rem;
+
 }
 
 .heading2 {
   font-size: 1.8rem;
   font-weight: bold;
-  text-align: left;
+  text-align: center;
   color: #EEE;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -301,6 +336,11 @@ input[id='quantity'] {
   margin-bottom: 4rem;
   line-height: 180%;
 }
+
+.whitespace{
+   padding: 3rem 6rem;
+}
+
 .prod-title-specs {
     font-size: 1rem;
     font-weight: bold;
@@ -378,11 +418,14 @@ input[id='quantity'] {
 .productPrice {
   margin:0rem;
   text-align:left;
+  color:#EEE;
+  font-size: 1.5rem;
+  text-align: center;
 }
 .paragraph {
   font-family: "HelveticaNeue-Light"; 
   font-size: 0.85rem; 
-  text-align: left;
+  text-align: center;
   max-width: 30rem;
   color: #EEE;
   padding-bottom:2.5rem;
@@ -392,11 +435,13 @@ input[id='quantity'] {
 .prod-description {
   font-family: "HelveticaNeue-Light"; 
   font-size: 0.85rem; 
-  text-align: left;
+  margin:0;
+  text-align: center;
   max-width: 30rem; 
   color: #EEE;
   clear: left;
   margin:0.25rem;
+
 }
 
 
@@ -408,15 +453,6 @@ input[id='quantity'] {
 
 .olist {
   color: #EEE;
-}
-
-
-
-
-.nav-main {
-  background-color: #333333;
-  margin: 0em; 
-  padding-bottom:1.75rem;
 }
 
 .prod-list {
@@ -586,7 +622,7 @@ input {
 
 .image-route-leftcolumn {
   margin-left: 0;
-  margin-right: 1em;
+  margin-right: 0em;
 
 }
 
@@ -641,21 +677,10 @@ input {
     animation-duration: 0.4s
 }
 
-/* Add Animation */
-@-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
-    to {top:0; opacity:1}
-}
-
-@keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-}
-
-/* The Close Button */
 .close {
     color: white;
     float: right;
+    padding-right: 2rem;
     font-size: 28px;
     font-weight: bold;
 }
@@ -675,7 +700,9 @@ input {
     text-align: center;
 }
 
-.modal-body {padding: 2px 16px;}
+.modal-body {padding: 2px 16px;
+background-color: #000000;
+}
 
 .modal-footer {
     padding-top: 2px;
@@ -684,9 +711,3 @@ input {
     color: white;
      text-align: center;
 }
-
-
-
-
-
-
